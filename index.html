@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<title>icon item section 1</title>
+</head>
+
+<body>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			overflow-x: hidden;
+		}
+
+		:root {
+			/* --font-family-- */
+			--font-primary: "Poppins", sans-serif;
+
+			--qlix-icon-item-section-pt: 24px;
+			--qlix-icon-item-section-pb: 24px;
+			--qlix-icon-item-section-bg: #f5f5f5;
+
+			--marque_item_gap: 40px;
+
+			--qlix-scrolling-brand-wrap-bg: #ffffff;
+			--qlix-scrolling-brand-wrap-pt: 16px;
+			--qlix-scrolling-brand-wrap-pb: 16px;
+			--qlix-scrolling-brand-wrap-shadow: 0px 3px 12px #e6e6e6;
+
+			--qlix-brand-scroll-speed: 20s;
+
+			--qlix-scrolling-brand-img-w: fit-content;
+			--qlix-scrolling-brand-img-h: 24px;
+		}
+
+		@media only screen and (max-width: 575px) {
+			:root {
+
+				--qlix-icon-item-section-pt: 16px;
+				--qlix-icon-item-section-pb: 16px;
+
+				--marque_item_gap: 20px;
+
+				--qlix-scrolling-brand-img-h: 16px;
+			}
+		}
+
+		/* marque slider css start */
+		.qlix-scrolling-brand-section {
+			padding-top: var(--qlix-icon-item-section-pt);
+			padding-bottom: var(--qlix-icon-item-section-pb);
+			background: var(--qlix-icon-item-section-bg);
+		}
+
+		.qlix-scrolling-brand-slider {
+			display: flex;
+			overflow: hidden;
+			user-select: none;
+			gap: var(--marque_item_gap);
+		}
+
+		.qlix-scrolling-brand-wrap {
+			background: var(--qlix-scrolling-brand-wrap-bg);
+			padding-top: var(--qlix-scrolling-brand-wrap-pt);
+			padding-bottom: var(--qlix-scrolling-brand-wrap-pb);
+			box-shadow: var(--qlix-scrolling-brand-wrap-shadow);
+		}
+
+		.qlix-scrolling-brand-content {
+			flex-shrink: 0;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			gap: var(--marque_item_gap);
+			min-width: 100%;
+			list-style-type: none;
+		}
+
+		.qlix-scrolling-brand-content.normal {
+			animation: qlix_brand_scroll_normal var(--qlix-brand-scroll-speed) linear infinite;
+		}
+
+		@keyframes qlix_brand_scroll_normal {
+			from {
+				transform: translateX(0);
+			}
+
+			to {
+				transform: translateX(calc(-100% - var(--marque_item_gap)));
+			}
+		}
+
+		.qlix-scrolling-brand-content.reverse {
+			animation: qlix_brand_scroll_reverse var(--qlix-brand-scroll-speed) linear infinite;
+		}
+
+		@keyframes qlix_brand_scroll_reverse {
+			from {
+				transform: translateX(-100%);
+			}
+
+			to {
+				transform: translateX(calc(0 - var(--marque_item_gap)));
+			}
+		}
+
+		.qlix-scrolling-brand-content>* {
+			flex: 0 0 auto;
+			text-align: center;
+		}
+
+		.qlix-scrolling-brand-hover-pause:hover .qlix-scrolling-brand-content {
+			animation-play-state: paused;
+		}
+
+		.qlix-scrolling-brand-content-item {
+			text-align: center;
+		}
+
+		.qlix-scrolling-brand-img {
+			width: var(--qlix-scrolling-brand-img-w);
+			height: var(--qlix-scrolling-brand-img-h);
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+
+		.qlix-scrolling-brand-img img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		/* marque slider css end */
+	</style>
+	<section class="qlix-scrolling-brand-section">
+		<div class="qlix-scrolling-brand-wrap">
+			<!-- marque slider start -->
+			<div class="qlix-scrolling-brand-slider qlix-scrolling-brand-hover-pause">
+				<ul class="qlix-scrolling-brand-content normal">
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+				</ul>
+				<ul class="qlix-scrolling-brand-content normal">
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- marque slider end -->
+		</div>
+	</section>
+	<section class="qlix-scrolling-brand-section">
+		<div class="qlix-scrolling-brand-wrap">
+			<!-- marque slider start -->
+			<div class="qlix-scrolling-brand-slider qlix-scrolling-brand-hover-pause">
+				<ul class="qlix-scrolling-brand-content reverse">
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+				</ul>
+				<ul class="qlix-scrolling-brand-content reverse">
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 1" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 2" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 4" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 5" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+						</div>
+					</li>
+					<li class="qlix-scrolling-brand-content-item">
+						<div class="qlix-scrolling-brand-img">
+							<img alt="Brand 6" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- marque slider end -->
+		</div>
+	</section>
+</body>
+
+</html>
