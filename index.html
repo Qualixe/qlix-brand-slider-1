@@ -30,7 +30,7 @@
 			--qlix-scrolling-brand-section-pb: 24px;
 			--qlix-scrolling-brand-section-bg: #f5f5f5;
 
-			--marque_item_gap: 40px;
+			--qlix-qlix-marque-item-gap: 40px;
 
 			--qlix-scrolling-brand-wrap-bg: #ffffff;
 			--qlix-scrolling-brand-wrap-pt: 16px;
@@ -49,7 +49,7 @@
 				--qlix-scrolling-brand-section-pt: 16px;
 				--qlix-scrolling-brand-section-pb: 16px;
 
-				--marque_item_gap: 20px;
+				--qlix-marque-item-gap: 20px;
 
 				--qlix-scrolling-brand-img-h: 16px;
 			}
@@ -66,7 +66,7 @@
 			display: flex;
 			overflow: hidden;
 			user-select: none;
-			gap: var(--marque_item_gap);
+			gap: var(--qlix-marque-item-gap);
 		}
 
 		.qlix-scrolling-brand-wrap {
@@ -81,7 +81,7 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-			gap: var(--marque_item_gap);
+			gap: var(--qlix-marque-item-gap);
 			min-width: 100%;
 			list-style-type: none;
 		}
@@ -96,7 +96,7 @@
 			}
 
 			to {
-				transform: translateX(calc(-100% - var(--marque_item_gap)));
+				transform: translateX(calc(-100% - var(--qlix-marque-item-gap)));
 			}
 		}
 
@@ -110,7 +110,7 @@
 			}
 
 			to {
-				transform: translateX(calc(0 - var(--marque_item_gap)));
+				transform: translateX(calc(0 - var(--qlix-marque-item-gap)));
 			}
 		}
 
